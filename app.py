@@ -32,8 +32,9 @@ if choice == "Upload":
 
 if choice == "Profiling":
     st.title("Exploratory Data Analysis")
-    report = df.profile_report()
-    st_profile_report(report)
+    if st.button("Generate report"):
+        report = df.profile_report()
+        st_profile_report(report)
 
 
 elif choice == "ML":
